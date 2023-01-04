@@ -1,15 +1,23 @@
-let fieldElement = document.querySelector(".js-Field");
-let currencyElement = document.querySelector(".js-Currency");
-let formElement = document.querySelector(".form");
-let converterElement = document.querySelector(".js-Converter");
+{
+    const onExchangeClick = (event) => {
+        const fieldElement = document.querySelector(".js-Field");
+        const currencyElement = document.querySelector(".js-Currency");
+        const converterElement = document.querySelector(".js-Converter");
+        
+        event.preventDefault();
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+        const field = fieldElement.value;
+        const currency = currencyElement.value;
 
-    let field = fieldElement.value
-    let currency = currencyElement.value
+        const converter = field / currency;
 
-    let converter = field / currency;
-    
-    converterElement.innerText = converter.toFixed(2)
-});
+        converterElement.innerText = converter.toFixed(2)
+
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".form");
+        formElement.addEventListener("submit", onExchangeClick);
+    };
+    init();
+}
