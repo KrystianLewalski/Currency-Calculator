@@ -4,7 +4,7 @@ This currency calculator is a small project made during my programming lessons.
 By this calculator you can calculate currency from PLN to EUR, GBP, CHF and USD.
 
 ## Demo
-![show demo](image/demo.gif)
+![show demo](images/demo.gif)
 https://krystianlewalski.github.io/Currency-Calculator/
 
 ## Technology
